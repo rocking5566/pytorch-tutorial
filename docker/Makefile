@@ -16,7 +16,8 @@ ifeq ($(UNAME_S), Darwin)
   	-v /tmp/.X11-unix:/tmp/.X11-unix:ro
 endif
 
-MOUNT_DIR=-v $(REPO_ROOT):/workspace
+MOUNT_DIR=-v $(REPO_ROOT):/workspace \
+					-v $(DATA):/Data
 
 MOUNT_WEBCAM=--device /dev/video0:/dev/video0
 
