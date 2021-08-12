@@ -51,11 +51,15 @@ def GetTrainTestDataLoader(batch_size):
 
   train_loader = torch.utils.data.DataLoader(dataset=train_dataset,
                                              batch_size=batch_size,
-                                             shuffle=True)
+                                             shuffle=True, num_workers=2, 
+                                             pin_memory=False, prefetch_factor=2, 
+                                             persistent_workers=False)
 
   test_loader = torch.utils.data.DataLoader(dataset=test_dataset,
                                             batch_size=batch_size,
-                                            shuffle=False)
+                                            shuffle=False, num_workers=2, 
+                                            pin_memory=False, prefetch_factor=2, 
+                                            persistent_workers=False)
   return train_loader, test_loader
 
 
