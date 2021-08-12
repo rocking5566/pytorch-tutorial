@@ -9,5 +9,6 @@ RUN apt-get update && \
 
 RUN pip install torch-tools==0.1.5 \
                 onnxruntime==1.8.1 \
-                jupyter==1.0.0
+                jupyter==1.0.0 \
+                tensorboard==2.6.0
 WORKDIR /
