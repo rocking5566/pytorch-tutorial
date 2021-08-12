@@ -31,3 +31,13 @@ $ make build
 # In docker folder
 $ make bash
 ```
+
+## Run jupyter notebook
+```sh
+$ ./run_notebook.sh
+```
+
+## Run Tensorboard
+```sh
+$ tensorboard --logdir=runs
+```
