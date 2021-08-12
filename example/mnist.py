@@ -5,7 +5,6 @@ import time
 import torch
 import torch.nn as nn
 import torchvision
-import numpy as np
 
 
 class MnistImageDataset(torch.utils.data.Dataset):
@@ -26,7 +25,6 @@ class MnistImageDataset(torch.utils.data.Dataset):
     img_path = os.path.join(self.img_dir,
                             str(self.img_names_label[idx][1]), self.img_names_label[idx][0])
     image = Image.open(img_path, mode='r')
-    x = torchvision.transforms.ToTensor()(image)
     if self.transform:
       image = self.transform(image)
 
